@@ -160,7 +160,7 @@ fi
 
 # Check out a local copy as a proxy.
 if [ ! -d "hl2sdk-proxy-repo" ]; then
-  git clone --mirror https://github.com/alliedmodders/hl2sdk hl2sdk-proxy-repo
+  git clone --mirror https://github.com/xiaolinRM/hl2sdk hl2sdk-proxy-repo
 else
   cd hl2sdk-proxy-repo
   git fetch
@@ -175,7 +175,7 @@ do
     continue
   fi
   repo=hl2sdk-proxy-repo
-  origin="https://github.com/alliedmodders/hl2sdk"
+  origin="https://github.com/xiaolinRM/hl2sdk"
   name=hl2sdk-$sdk
   branch=$sdk
   checkout
@@ -184,7 +184,7 @@ done
 if [ $want_mock_sdk -eq 1 ]; then
   name=hl2sdk-mock
   branch=master
-  repo="https://github.com/alliedmodders/hl2sdk-mock"
+  repo="https://github.com/xiaolinRM/hl2sdk-mock"
   origin=
   checkout
 fi

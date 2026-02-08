@@ -79,7 +79,7 @@ Get-Repository -Name "mmsource-1.12" -Branch "master" -Repo "https://github.com/
 
 if (-not (Test-Path "hl2sdk-proxy-repo" -PathType Container))
 {
-    & git clone --mirror https://github.com/alliedmodders/hl2sdk hl2sdk-proxy-repo 2>&1 | Write-Host
+    & git clone --mirror https://github.com/xiaolinRM/hl2sdk hl2sdk-proxy-repo 2>&1 | Write-Host
 }
 else
 {
@@ -89,10 +89,10 @@ else
 }
 
 $SDKS | ForEach-Object {
-    Get-Repository -Name "hl2sdk-$_" -Branch $_ -Repo "hl2sdk-proxy-repo" "https://github.com/alliedmodders/hl2sdk.git"
+    Get-Repository -Name "hl2sdk-$_" -Branch $_ -Repo "hl2sdk-proxy-repo" "https://github.com/xiaolinRM/hl2sdk.git"
 }
 
-Get-Repository -Name "hl2sdk-mock" -Branch "master" -Repo "https://github.com/alliedmodders/hl2sdk-mock.git"
+Get-Repository -Name "hl2sdk-mock" -Branch "master" -Repo "https://github.com/xiaolinRM/hl2sdk-mock.git"
 
 # Find a suitable installation of Python
 $PYTHON_CMD = Get-Command 'python3' -ErrorAction SilentlyContinue
