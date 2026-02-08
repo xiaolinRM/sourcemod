@@ -101,4 +101,4 @@ jobs:
         uses: actions/upload-artifact@v5
         with:
           name: sourcemod-${{ matrix.os_short }}-${{ matrix.compiler_cc }}
-          path: ./msourcemod/build/package
+          path: ./sourcemod/build/package
